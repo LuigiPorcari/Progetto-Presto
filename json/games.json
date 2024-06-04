@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "name": "The Last of Us Part II",
+      "category": "Avventura",
+      "price": 69.99
+    },
+    {
+      "id": 2,
+      "name": "Cyberpunk 2077",
+      "category": "Fantascienza",
+      "price": 59.99
+    },
+    {
+      "id": 3,
+      "name": "Red Dead Redemption 2",
+      "category": "Azione",
+      "price": 49.99
+    },
+    {
+      "id": 4,
+      "name": "Grand Theft Auto V",
+      "category": "Azione",
+      "price": 29.99
+    },
+    {
+      "id": 5,
+      "name": "Horizon Zero Dawn",
+      "category": "Avventura",
+      "price": 19.99
+    },
+    {
+      "id": 6,
+      "name": "League of Legends",
+      "category": "Moba",
+      "price": 19.99
+    },
+    {
+      "id": 7,
+      "name": "Apex Legends",
+      "category": "Battle Royale",
+      "price": 19.99
+    },
+    {
+      "id": 8,
+      "name": "Fortnite",
+      "category": "Battle Royale",
+      "price": 19.99
+    },
+    {
+      "id": 9,
+      "name": "Forza Horizon 5",
+      "category": "Sport",
+      "price": 39.99
+    },
+    {
+      "id": 10,
+      "name": "Fifa 24",
+      "category": "Sport",
+      "price": 29.99
+    }
+  ]
+  

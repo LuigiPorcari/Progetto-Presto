@@ -1,0 +1,316 @@
+/* ! SETTAGGI INIZIALI */
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --blue: #14213d;
+    --orange: #fca311;
+    --gray: #e5e5e5;
+    --black: black;
+}
+
+.shadowCustom {
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.marginCustom {
+    margin-top: 70px;
+}
+
+.font-title {
+    font-family: "Play", sans-serif;
+}
+
+.font-gen {
+    font-family: "Roboto", sans-serif;
+}
+
+.blue-custom {
+    color: var(--blue);
+}
+
+.orangeCustom {
+    color: var(--orange);
+}
+
+.blackCustom {
+    color: var(--black);
+}
+
+.background-orange {
+    background-color: var(--orange);
+}
+
+body {
+    margin: 0px;
+    background-color: var(--gray);
+}
+
+/* inizio  bottone della darkmode */
+
+.inputCustom[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+
+}
+
+
+.containerToggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 5;
+}
+
+
+
+.labelCustom {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 100px;
+    height: 50px;
+    background: grey;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+}
+
+.labelCustom:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    background: var(--orange);
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+.inputCustom:checked+.labelCustom {
+    background: black;
+}
+
+.inputCustom:checked+.labelCustom:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+.labelCustom:active:after {
+    width: 40px;
+    background-color: var(--blue);
+}
+
+
+/* fine bottone darkmode */
+
+body:has(#switch:checked) {
+    --blue: #fca311;
+    --orange: #14213d;
+    --gray: black;
+    --black: white;
+}
+
+
+body:has(#switch:checked) .navbar {
+    background-color: var(--blue);
+}
+
+body:has(#switch:checked)>nav a {
+    color: white;
+}
+
+
+
+
+
+
+
+.navbar {
+    background-color: white;
+    transition: 0.5s;
+}
+
+.nav-item:hover::before {
+    content: "";
+    width: 2px;
+    animation: linkHover 0.5s forwards;
+    position: absolute;
+    background-color: var(--orange);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0px;
+
+}
+
+.nav-item:hover::after {
+    content: "";
+    width: 2px;
+    animation: linkHover 0.5s forwards;
+    position: absolute;
+    background-color: var(--orange);
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0px;
+}
+
+@keyframes linkHover {
+    from {
+        height: 0px;
+    }
+
+    to {
+        height: 35px;
+    }
+}
+
+.carousel img {
+    height: 85vh;
+    object-fit: cover;
+}
+
+.carousel::after {
+    content: "";
+    backdrop-filter: blur(5px);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.navbar-brand {
+    color: var(--orange);
+}
+
+.navbarRotate {
+    animation: rotateNav 1s forwards;
+}
+
+@keyframes rotateNav {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+.navbar-brand:hover {
+    color: var(--orange) !important;
+}
+
+.container-title {
+    position: absolute;
+    left: 20%;
+    top: 30%;
+}
+
+.container-title span {
+    text-shadow: 5px 5px var(--orange);
+}
+
+.titleNumber {
+    text-shadow: 4px 4px var(--orange);
+}
+
+.textShadow {
+    text-shadow: 3px 3px var(--blue);
+}
+
+.bg-Blue {
+    background: var(--blue);
+}
+
+.imgNumber {
+    filter: drop-shadow(-5px -5px 5px var(--orange));
+}
+
+.imgCustom {
+    width: 100%;
+    height: 270px;
+}
+
+.card-img-overlay:hover {
+    backdrop-filter: blur(7px) grayscale(50%);
+}
+
+.card-img-overlay:hover .cardCustom {
+    opacity: 1 !important;
+    text-shadow: 2px 2px 5px var(--orange);
+}
+
+.swiper {
+    width: 240px;
+    height: 320px;
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.swiper-slide:nth-child(1n) {
+    background-color: rgb(206, 17, 17);
+}
+
+.swiper-slide:nth-child(2n) {
+    background-color: rgb(0, 140, 255);
+}
+
+.swiper-slide:nth-child(3n) {
+    background-color: rgb(10, 184, 111);
+}
+
+.swiper-slide:nth-child(4n) {
+    background-color: rgb(211, 122, 7);
+}
+
+.swiper-slide:nth-child(5n) {
+    background-color: rgb(118, 163, 12);
+}
+
+.swiper-slide:nth-child(6n) {
+    background-color: rgb(180, 10, 47);
+}
+
+.swiper-slide:nth-child(7n) {
+    background-color: rgb(35, 99, 19);
+}
+
+.swiper-slide:nth-child(8n) {
+    background-color: rgb(0, 68, 255);
+}
+
+.swiper-slide:nth-child(9n) {
+    background-color: rgb(218, 12, 218);
+}
+
+.swiper-slide:nth-child(10n) {
+    background-color: rgb(54, 94, 77);
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .nav-item:hover::before {
+        display: none;
+    }
+
+    .nav-item:hover::after {
+        display: none;
+    }
+
+    .navbar {
+        width: 100% !important;
+    }
+    .heightCards{
+        min-height: 350px;
+    }
+}
